@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Manchester United</title>
+	<link rel="stylesheet" href="../styles/normalize.css">
+	<link rel="stylesheet" href="../styles/feedback.css">
+	<link rel="icon" type="img/ico" href="../images/logo.ico">
+</head>
+
+<body>
+<!--Reference for scripts: https://www.tutorialrepublic.com/faq/how-to-reset-a-form-using-jquery.php -->
+<script>
+	function submitFunction(){
+	alert("Feedback Submitted Successfully! Thank You!")}
+</script>
+<script>
+	function resetFunction(){
+	document.getElementById(surveyForm).reset();}
+</script>
+
+  <header>
+  <!--Reference for header image: https://resources.premierleague.com/premierleague/badges/t1.svg -->
+  	<img src="../images/HeaderImage.png" alt="header image" title="Manchester United Logo" width="55">
+   	<h2>MANCHESTER UNITED</h2>
+   	<h3>A Tour Through the World of United</h3>
+  </header>
+  <nav id="nav_menu">
+  	<ul>
+    	<li><a href="../index.html">HOME</a></li>
+    	<li><a href="image.html">IMAGES</a>
+    		<ul>
+    			<li><a href="">Women's Team</a></li>
+				<li><a href="">Men's Team</a>
+					<ul>
+						<li><a href="">First Team</a></li>
+						<li><a href="">Second Team</a></li>
+						<li><a href="">Reserve Team</a></li>
+					</ul>
+				</li>
+    			<li><a href="">Managers</a></li>
+    			<li><a href="">Stadium</a></li>
+    		</ul>
+		</li>
+		<li><a href="stats.html">Statistics</a></li>
+		 <li><a href="feedback.html" class="current">FEEDBACK</a></li>
+	</ul>
+  </nav>
+  
+  <main>
+    <aside class="asideLeft">
+		<div id="leftDiv">
+			<h3>QUICK MENU</h3>
+				<nav id="nav_list">
+				<ul>
+					<li><a href="../index.html"><img align="middle" src="../thumbnails/HomeButton.png"></a></li>
+					<li><a href="../index.html">Home</a></li><br>
+					<li><a href="image.html"><img src="../thumbnails/ImageButton.png"></a></li>
+					<li><a href="image.html">Images</a></li><br>
+					<li><a href="stats.html"><img src="../thumbnails/StatsButton.png"></a></li>
+					<li><a href="stats.html">Statistics</a></li><br>
+					<li><a href="feedback.html" class="current"><img src="../thumbnails/FeedbackButton.png"></a></li>
+					<li><a href="feedback.html" class="current">Feedback</a></li>
+				</ul>
+		</nav>
+	</div>
+	</aside>
+	<section>
+	 <h1>ENTER YOUR DETAILS</h1>
+	<div>
+		<form id="surveyForm" action="feedback.html">
+			<label for="fname">Name</label>
+			<input type="text" id="fname" name="fname" placeholder="Enter your full name(Only Letters allowed)" pattern="[A-Za-z]" required><br><br>
+			
+			<label for="fname">Email</label>
+			<input type="email" id="email" name="email" placeholder="Enter your valid email address" required><br><br>
+
+			<label for="country"  placeholder="--Choose your Country--">Country</label>
+				<select id="country" name="country">
+				<option value="default">--Choose your country--</option>
+					<optgroup label="EUROPE">
+						<option value="uk">United Kingdom</option>
+						<option value="italy">Italy</option>
+						<option value="spain">Spain</option>
+						<option value="germany">Germany</option>
+					</optgroup>
+					<optgroup label="ASIA">
+						<option value="india">India</option>
+						<option value="iran">Iran</option>
+						<option value="srilanka">Sri Lanka</option>
+						<option value="pakistan">Pakistan</option>
+					</optgroup>
+				</select><br><br>
+			
+				<label for="players">CHOOSE YOUR FAVOURITE PLAYER(S)</label>
+				<select id="players" name="players" multiple>
+					<option value="bobby">Bobby Charlton</option>
+					<option value="keane">Roy Keane</option>
+					<option value="scholes">Paul Scholes</option>
+					<option value="ronaldo">Cristiano Ronaldo</option>
+					<option value="rooney">Wayne Rooney</option>
+				</select><br><br>
+				
+			<label for="comments">HOW DO YOU FEEL BEING A UNITED FAN? </label><br>
+				<textarea placeholder="If you have any comments, please enter them here." name="comments"></textarea><br><br>
+			<input type="submit" value="Submit">&nbsp;&nbsp;<input onclick="resetFunction()" type="submit" value="Reset">
+		</form>
+	</div>
+	</section>
+	<aside class="asideRight">
+	<div>
+	<h1>Quick Survey!</h1>
+	<form action="feedback.html">
+			<label for="comments">WHAT DID YOU LIKE MOST ABOUT OUR WEBSITE?</label><br>
+			<input type="checkbox" name="checkLike" value="content" checked><label class="labelCheckbox">Content</label><br>
+			<input type="checkbox" name="checkLike" value="design"><label class="labelCheckbox">Design</label><br>
+			<input type="checkbox" name="checkLike" value="color"><label class="labelCheckbox">Color Combinations</label><br>
+			<input type="checkbox" name="checkLike" value="images"><label class="labelCheckbox">Images</label><br><br>
+	
+			<label for="comments">WILL YOU VISIT OUR WEBSITE AGAIN?</label><br>
+			<input type="radio" name="visit" value="yes"checked><label class="labelCheckbox">Yes</label>&nbsp;&nbsp;
+			<input type="radio" name="visit" value="no"><label class="labelCheckbox">No</label><br><br>
+			
+			<input onclick="submitFunction()" type="submit" id="surveySubmit" value="Submit">
+	</form>
+	</div>
+	<div id="orderKit">
+	<label>Order our 2019/20 season home jersey here!<label>
+	<!--Reference for header image: https://www.teamzo.com/images/1558003337-man-utd-home-shirt-19-20.jpg -->
+	<img src="../images/HomeKit.png" alt="homekit" title="Home Kit 2019/20"></img>
+	<a href="mailto:akhilmathewtem@gmail?Subject=Hello" target="_top"><input type="submit" id="orderSubmit" value="Order"></a>
+	</div>
+	</aside>
+  </main>
+   <footer>
+	<p>&copy; Manchester United</p>
+  </footer>
+ </body>
+ </html>

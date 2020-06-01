@@ -1,0 +1,309 @@
+	*{
+		margin: 0;
+		padding: 0;
+}
+html {
+	background-image: url("../images/background.jpg");	
+}
+body  {
+	font-family: Arial, Helvetica, sans-serif;
+	width: 1000px;
+	height: auto;
+	background-color: white;
+	margin: 0 auto; 
+	padding: 0;
+	border: 3px solid black;
+	box-shadow: 0 9px 18px 9px;
+}
+h1, h2, h3, p {
+	margin: 0;
+	padding: 0;
+}
+
+/* Header */
+header { 
+    padding: 15px;
+	background-color: #1a1a1a;
+} 
+header img { 
+	float: left; 
+	padding-right: 15px;
+	width: 80px;	
+} 
+header h2 {
+	font-size: 300%;
+	font-weight: bolder; 
+	color: #C70101;
+}
+header h3 {
+	font-size: 120%;
+	padding-bottom: 15px;
+	color: white;
+	font-family: Lucida Sans Unicode;
+	text-transform: uppercase;
+}
+
+/* Navigation menu */
+#nav_menu {
+	clear: left;
+}
+#nav_menu ul {
+	list-style: none;
+	position: relative;
+}
+#nav_menu ul li {
+	float: left;
+}
+#nav_menu ul ul {
+	display: none;
+	position: absolute;
+	top: 100%;
+}
+#nav_menu ul ul li {
+	float: none;
+}
+#nav_menu ul li:hover > ul {
+	display: block;
+}
+#nav_menu > ul::after {
+	content: "";
+	clear: both;
+	display: block;
+}
+#nav_menu ul {
+	margin: 0;
+	padding: 0;
+}
+#nav_menu ul li a {
+	font-size: 120%;
+	text-align: center;
+	display: block;
+	width: 250px;
+	padding: .7em 0;
+	text-decoration: none;
+	background-color: #C70101;
+	font-family: Lucida Sans Unicode;
+	text-transform: uppercase;
+	color: white;
+	font-weight: bolder;
+}
+
+#nav_menu ul ul li ul {
+	position: absolute;
+	left: 100%;
+	top: 2.6em; }
+#nav_menu ul li a.current {
+	color: #b7a57a;
+}
+#nav_menu ul li a:hover, #nav_menu ul li a:focus {
+	background-color: #1a1a1a;
+}
+
+/* Navigation Bar - Side*/
+#nav_list ul{
+	padding: 5px;
+	padding-left: 10px;
+	list-style-type: none;
+}
+
+#nav_list ul li img {
+	display: block;
+	max-width: 40%;
+	color: black;
+	margin: auto;
+	overflow: visible;
+	transition: transform .2s;
+	margin-bottom: 3px;	
+	margin-top: 10px;
+}
+#nav_list ul li img:hover{
+transform: scale(1.5);
+}
+#nav_list ul li {
+	text-align: center;
+	font-family: Lucida Sans Unicode;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+/*Aside Left*/
+.asideLeft{
+	width: 15%;
+	float: left;
+	border-right: 2px solid #C70101;
+	padding-left: 10px;
+	height: 840px;
+}
+.asideLeft ul li a{
+	text-decoration: none;
+	color: black;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #C70101;
+}
+.asideLeft h3{
+	font-size: 87%;
+	text-align: center;
+	color: #C70101;
+	font-weight:bolder;
+	padding: 10px;
+	font-family: Lucida Sans Unicode;
+	text-transform: uppercase;
+	border-bottom: 1px solid #C70101;
+	margin-right: 10px;
+}
+/*Section*/
+section {
+	width: 515px;
+	float: right;
+	padding: 20px 40px 20px 20px;
+	float: left;
+}
+section h1 { 
+	font-size: 140%;
+	margin-bottom: .5em;
+	text-transform: uppercase;
+	font-family: Lucida Sans Unicode;
+	font-weight: bolder;
+	color: #C70101;
+}
+
+label{
+	font-family: Lucida Sans Unicode;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #C70101;
+}
+input[type=text], select {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+input[type=email], select {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+input[type=submit] {
+	width: 49%;
+	background-color: #C70101;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font-family: Lucida Sans Unicode;
+	text-transform: uppercase;
+	font-size: 100%;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+#leftDiv {
+	width: 120px;
+	border-radius: 5px;
+	background-color: #f2f2f2;
+	padding: 10px;
+	margin-top: 5px;
+	border: 1px solid #C70101;
+	height: 95%;
+}
+div {
+	width: 495px;
+	border-radius: 5px;
+	background-color: #f2f2f2;
+	padding: 20px;
+	border: 1px solid #C70101;
+}
+#players option{
+	padding: 5px 20px;
+	margin: 0;
+}
+textarea{
+	width: 100%;
+	height: 8em;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+/*Aside Right*/
+.asideRight{
+	width: 25%;
+	float: right;
+	border-left: 2px solid #C70101;
+	padding: 5px;
+	height: 830px;
+}
+.asideRight h1{
+	font-size: 140%;
+	font-family: Lucida Sans Unicode;
+	text-transform: uppercase;
+	color: #C70101;
+	text-align: center;
+	margin-bottom: 0.5em;
+	border-bottom: 1px solid #C70101;
+}
+.asideRight div{
+	width: 70%;
+	margin-left: 1em;
+	margin-top: 0.3em;
+}
+.labelCheckbox{
+	font-family: Lucida Sans Unicode;
+	text-transform: uppercase;
+	font-size: 80%;
+	color: black;
+	font-weight: normal;
+	margin-left: .5em;
+}
+#surveySubmit{
+	width: 100%;
+	margin: auto;
+	font-family: Lucida Sans Unicode;
+	text-transform: uppercase;
+	font-size: 100%;
+}
+#orderKit img{
+	width: 135px; 
+	height: 140px;
+	margin: auto;
+	display: block;
+	margin-top: 10px;
+	margin-bottom: 25px;
+}
+#orderKit{
+	margin-top: 10px;
+}
+#orderSubmit{
+	width: 100%;
+	margin: auto;
+	font-family: Lucida Sans Unicode;
+	text-transform: uppercase;
+	font-size: 100%;
+	margin-bottom: 25px;
+}
+
+/* Footer */
+footer { 
+	clear: both;
+	border-top: 2px solid #C70101;
+	padding: 15px;
+	background-color: #1a1a1a;
+	color: #C70101;
+} 
+footer p {
+	font-size: 90%;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bolder;
+}
